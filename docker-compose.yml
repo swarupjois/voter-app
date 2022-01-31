@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  voter-app:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app/voterapp/
+    environment:
+      MONGO_URI: mongodb://mongodb-myapp:27017/
+
+  mongodb-myapp:
+     image: mongo
+     ports:
+       - "27017:27017"

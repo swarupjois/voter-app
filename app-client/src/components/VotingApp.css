@@ -1,0 +1,61 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    height: 500px;
+    width: 750px;
+}
+
+.titleSection {
+    height: 100px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #ffff;
+}
+
+.bjp {
+    padding: 20px;
+}
+
+.resultButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.labelSection {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #4b4ba3;
+}
+
+.buttonSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
