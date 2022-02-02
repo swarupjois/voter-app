@@ -3,7 +3,10 @@ let dbHandle;
 let dbClient;
 
 function init() {
-  let url = "mongodb://mongodb-myapp:27017/" //"mongodb://localhost:27017";
+  let url = process.env.MONGO_URI; //"mongodb://mongodb-myapp:27017/"
+  if (!url) {
+    url = "mongodb://mongodb-myapp:27017/";
+  }
 
   const options = {
     readPreference: "nearest", //ReadPreference.NEAREST

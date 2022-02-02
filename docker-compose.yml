@@ -5,8 +5,6 @@ services:
     build: .
     ports:
       - 3000:3000
-    volumes:
-      - ./:/app/voterapp/
     environment:
       MONGO_URI: mongodb://mongodb-myapp:27017/
 
@@ -14,3 +12,9 @@ services:
      image: mongo
      ports:
        - "27017:27017"
+     volumes:
+      - voterAppDb:/data/db
+
+volumes:
+    voterAppDb:
+        external: false
