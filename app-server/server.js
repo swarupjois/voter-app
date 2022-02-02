@@ -29,7 +29,6 @@ app.post('/voterapp/updateVotes', jsonParser, function (req, res) {
   let dbLatencyStr = [];
   let filter = {};
   filter.type = "votingResult";
-  console.log("new values:", req.body);
   let newvalues = JSON.parse(JSON.stringify(req.body));
   mongo.updateItem(dbLatencyStr, filter, newvalues, (error, response) => {
     if (error) {
@@ -44,7 +43,6 @@ app.listen(port, () => {
 })
 
 function initMongo() {
-  console.log("init mongo")
   mongo.init();
 }
 initMongo();

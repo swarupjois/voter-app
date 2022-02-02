@@ -11,6 +11,7 @@ function init() {
   const options = {
     readPreference: "nearest", //ReadPreference.NEAREST
   };
+  console.log("connecting to mongo...")
   MongoClient.connect(url, options, (err, db) => {
     if (err) {
       console.log("error connection to mongo:", err)
@@ -26,7 +27,7 @@ function init() {
       "sample",
       (error, collection) => {
         if (error) {
-          console.log(error)
+          console.log("error while creating collection:", error)
         } else {
           console.log("succesfully created collection");
         }
